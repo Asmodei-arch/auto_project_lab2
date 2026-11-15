@@ -2,10 +2,11 @@ IVERILOG := iverilog
 VVP := vvp
 GTKWAVE := gtkwave
 
-TOP := APB_top_tb
+TOP_WITH_EXT ?= APB_top_tb.sv
+TOP := $(basename $(notdir $(TOP_WITH_EXT)))
 
 BUILD_DIR := build
-SIM_FILE := $(BUILD_DIR)/sim.vvp
+SIM_FILE := $(BUILD_DIR)/$(TOP).vvp
 
 SV_SOURCES := $(wildcard *.sv)
 

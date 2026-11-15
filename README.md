@@ -8,6 +8,6 @@ Basic realisation of APB specification.
 - iverlog - for compilation 
 - vvp - for simulation
 
-## Run
+## Run and compile
 make sim
 
